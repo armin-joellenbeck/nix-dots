@@ -107,6 +107,7 @@
   #  wget
     gh
     git
+    google-chrome
     micro
   ];
 
