@@ -97,6 +97,45 @@
     home.packages = [ pkgs.atool pkgs.httpie ];
     programs.bash.enable = true;
 
+    programs.gh = {
+      enable = true;
+
+      gitCredentialHelper.enable = true;
+    };
+
+    programs.git = {
+      enable = true;
+          
+        extraConfig = {
+          advice = {
+		    skippedCherryPicks = false;
+          };
+      
+          core = {
+            editor = "micro";
+          };
+      
+          fetch = {
+      		prune = true;
+      		pruneTags = true;
+          };
+            
+          init = {
+            defaultBranch = "main";
+          };
+      
+          push = {
+      	    autoSetupRemote = true;
+          };
+       
+          user = {
+            name = "Armin Jöllenbeck";
+            email = "armin@joellenbeck.net";
+          };
+        };
+      };
+    };
+
     # The state version is required and should stay at the version you
     # originally installed.
     home.stateVersion = "24.11";
@@ -114,8 +153,6 @@
   environment.systemPackages = with pkgs; [
   #  vim # Do not forget to add an editor to edit configuration.nix! The Nano editor is also installed by default.
   #  wget
-    gh
-    git
     google-chrome
     micro
   ];
