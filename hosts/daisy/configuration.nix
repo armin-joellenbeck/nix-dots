@@ -95,7 +95,15 @@
 
   home-manager.users.armin = { pkgs, ... }: {
     home.packages = [ pkgs.atool pkgs.httpie ];
-    programs.bash.enable = true;
+
+    programs.bash = {
+      enable = true;
+
+      shellAliases = {
+        ll = "ls -al";
+        ls = "ls --color=auto --group-directories-first -v";
+      };
+    };
 
     programs.gh = {
       enable = true;
@@ -106,32 +114,31 @@
     programs.git = {
       enable = true;
           
-        extraConfig = {
-          advice = {
-		    skippedCherryPicks = false;
-          };
+      extraConfig = {
+        advice = {
+	      skippedCherryPicks = false;
+        };
       
-          core = {
-            editor = "micro";
-          };
+        core = {
+          editor = "micro";
+        };
       
-          fetch = {
-      		prune = true;
-      		pruneTags = true;
-          };
+        fetch = {
+          prune = true;
+          pruneTags = true;
+        };
             
-          init = {
-            defaultBranch = "main";
-          };
+        init = {
+          defaultBranch = "main";
+        };
       
-          push = {
-      	    autoSetupRemote = true;
-          };
+        push = {
+      	  autoSetupRemote = true;
+        };
        
-          user = {
-            name = "Armin Jöllenbeck";
-            email = "armin@joellenbeck.net";
-          };
+        user = {
+          name = "Armin Jöllenbeck";
+          email = "armin@joellenbeck.net";
         };
       };
     };
