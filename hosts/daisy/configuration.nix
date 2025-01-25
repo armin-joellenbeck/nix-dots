@@ -91,6 +91,7 @@
   };
 
   home-manager.useGlobalPkgs = true;
+  home-manager.backupFileExtension = "backup";
 
   home-manager.users.armin = { pkgs, ... }: {
     home.packages = [ pkgs.atool pkgs.httpie ];
