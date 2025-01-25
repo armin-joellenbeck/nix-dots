@@ -90,6 +90,8 @@
     ];
   };
 
+  home-manager.useGlobalPkgs = true;
+
   home-manager.users.armin = { pkgs, ... }: {
     home.packages = [ pkgs.atool pkgs.httpie ];
     programs.bash.enable = true;
