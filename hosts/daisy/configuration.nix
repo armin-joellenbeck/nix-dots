@@ -107,6 +107,30 @@
       };
     };
 
+    programs.micro = {
+        enable = true;
+
+        settings = {
+          autosu = true;
+
+          colorscheme = "twilight";
+
+          colorcolumn = 81;
+
+          hlsearch = true;
+
+          helpsplit = "vsplit";
+
+          hltaberrors = true;
+
+          rmtrailingws = true;
+
+          smartpaste = true;
+          tabsize = 2;
+          tabstospaces = true;
+        };
+    };
+
     programs.gh = {
       enable = true;
 
@@ -115,29 +139,29 @@
 
     programs.git = {
       enable = true;
-          
+
       extraConfig = {
         advice = {
-	      skippedCherryPicks = false;
+          skippedCherryPicks = false;
         };
-      
+
         core = {
           editor = "micro";
         };
-      
+
         fetch = {
           prune = true;
           pruneTags = true;
         };
-            
+
         init = {
           defaultBranch = "main";
         };
-      
+
         push = {
-      	  autoSetupRemote = true;
+          autoSetupRemote = true;
         };
-       
+
         user = {
           name = "Armin Jöllenbeck";
           email = "armin@joellenbeck.net";
