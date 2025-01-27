@@ -13,6 +13,11 @@
   boot.loader.efi.canTouchEfiVariables = true;
   console.keyMap = "de-latin1-nodeadkeys";
 
+  # bluetooth
+  hardware.bluetooth.enable = true;
+  hardware.bluetooth.powerOnBoot = true;
+  services.blueman.enable = true;
+
   #networking
   networking.hostName = "daisy";
   networking.networkmanager.enable = true;
