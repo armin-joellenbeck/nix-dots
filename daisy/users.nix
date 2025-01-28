@@ -37,7 +37,7 @@
 
             colorscheme = "twilight";
 
-            colorcolumn = 81;
+            colorcolumn = 72;
 
             hlsearch = true;
 
@@ -47,8 +47,14 @@
 
             rmtrailingws = true;
 
+            savecursor = true;
+
+            scrollbar = true;
+
             smartpaste = true;
+
             tabsize = 2;
+
             tabstospaces = true;
           };
       };
