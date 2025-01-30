@@ -4,8 +4,8 @@
   system.stateVersion = "24.11";
 
   imports = [
-    ./boot.nix
     ./graphics.nix
+    ./hardware.nix
     ./location.nix
     ./networking.nix
     ./packages.nix
