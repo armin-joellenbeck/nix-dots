@@ -59,8 +59,11 @@
     };
 
     nvidia = {
+      open = false;
       package = config.boot.kernelPackages.nvidiaPackages.legacy_470;
       modesetting.enable = true;
+      powerManagement.enable = true;
+      nvidiaSettings = true;
     };
   };
 
