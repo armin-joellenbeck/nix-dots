@@ -4,19 +4,20 @@
   services = {
     displayManager = {
       autoLogin = {
-        enable = true;
+        enable = false;
         user = "armin";
       };
     };
 
     xserver = {
       enable = true;
+
       displayManager.lightdm.enable = true;
+
       desktopManager.xfce = {
         enable = true;
         enableScreensaver = false;
       };
-
     };
   };
 }
