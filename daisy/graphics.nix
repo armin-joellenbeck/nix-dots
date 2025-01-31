@@ -7,17 +7,20 @@
         enable = false;
         user = "armin";
       };
+
+      defaultSession = "none+i3";
     };
 
     xserver = {
       enable = true;
 
-      displayManager.lightdm.enable = true;
-
-      desktopManager.xfce = {
-        enable = true;
-        enableScreensaver = false;
+      displayManager = {
+        lightdm = {
+          enable = true;
+        };
       };
+
+      windowManager.i3.enable = true;
     };
   };
 }

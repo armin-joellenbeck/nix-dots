@@ -19,6 +19,55 @@
     users.armin = { pkgs, ... }: {
       home.stateVersion = "24.11";
 
+      xsession.windowManager.i3 = {
+        enable = true;
+
+        package = pkgs.i3-gaps;
+
+        config = {
+          modifier = "Mod4";
+
+          gaps = {
+            inner = 10;
+            outer = 5;
+          };
+
+          terminal = "ghostty";
+
+          startup = [
+            { command = "google-chrome-stable"; }
+          ];
+
+          bars = [
+            {
+              fonts = {
+                names = ["pango"];
+                style = "monospace";
+                size = 16.0;
+              };
+
+              statusCommand = "i3status";
+            }
+          ];
+        };
+      };
+
+      programs.i3status = {
+        enable = true;
+
+        enableDefault = false;
+
+        modules = {
+          "tztime local" = {
+            enable = true;
+
+            settings = {
+              format = "%H:%M";
+            };
+          };
+        };
+      };
+
       home.packages = with pkgs; [
         ghostty
         google-chrome
