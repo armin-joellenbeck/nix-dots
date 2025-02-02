@@ -71,6 +71,8 @@
           keybindings = lib.mkOptionDefault {
             "Ctrl+Mod1+Delete" =
               "mode \"[e]xit, [s]uspend, [r]eboot, [p]oweroff\"";
+            "Shift+Mod4+Return" =
+              "exec google-chrome-stable";
           };
         };
       };
