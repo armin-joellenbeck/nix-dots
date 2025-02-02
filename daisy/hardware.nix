@@ -60,7 +60,7 @@
 
     nvidia = {
       package = config.boot.kernelPackages.nvidiaPackages.legacy_470;
-      modesetting.enable = false;
+      modesetting.enable = true;
     };
   };
 
