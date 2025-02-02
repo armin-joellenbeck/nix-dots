@@ -19,6 +19,12 @@
     users.armin = { pkgs, ... }: {
       home.stateVersion = "24.11";
 
+      xdg.configFile."nixpkgs/config.nix".text = ''
+        {
+                allowUnfree = true;
+        }
+      '';
+
       xsession.windowManager.i3 = {
         enable = true;
 
