@@ -4,7 +4,7 @@
   services = {
     displayManager = {
       autoLogin = {
-        enable = false;
+        enable = true;
         user = "armin";
       };
 
