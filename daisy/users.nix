@@ -32,9 +32,10 @@
             outer = 5;
           };
 
-          terminal = "ghostty";
+          terminal = "ghostty --gtk-single-instance=true";
 
           startup = [
+            { command = "ghostty --gtk-single-instance=true"; }
             { command = "google-chrome-stable"; }
             { command = "xsetroot -solid \"#555555\""; }
           ];
