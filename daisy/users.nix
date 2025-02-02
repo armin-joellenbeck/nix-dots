@@ -36,6 +36,7 @@
 
           startup = [
             { command = "google-chrome-stable"; }
+            { command = "xsetroot -solid \"#555555\""; }
           ];
 
           bars = [
