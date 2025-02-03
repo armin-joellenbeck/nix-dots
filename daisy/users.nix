@@ -94,8 +94,11 @@
       };
 
       home.packages = with pkgs; [
+        bacon
+        gcc
         ghostty
         google-chrome
+        rustup
       ];
 
       programs.bash = {
