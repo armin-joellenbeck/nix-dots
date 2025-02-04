@@ -94,6 +94,16 @@
     };
   };
 
+  programs.helix = {
+    enable = true;
+
+    defaultEditor = true;
+
+    settings = {
+      theme = "github_light";
+    };
+  };
+
   programs.micro = {
       enable = true;
 
@@ -138,11 +148,7 @@
         skippedCherryPicks = false;
       };
 
-      core = {
-        editor = "micro";
-      };
-
-      fetch = {
+     fetch = {
         prune = true;
         pruneTags = true;
       };
