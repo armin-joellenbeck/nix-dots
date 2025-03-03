@@ -3,6 +3,18 @@
 {
   home.stateVersion = "24.11";
 
+  home.packages = with pkgs; [
+    bacon
+    gcc
+    ghostty
+    google-chrome
+    rustup
+  ];
+
+  imports = [
+    ./programs
+  ];
+
   xdg.configFile."nixpkgs/config.nix".text = ''
     {
          allowUnfree = true;
@@ -61,110 +73,5 @@
     };
   };
 
-  programs.i3status = {
-    enable = true;
 
-    enableDefault = false;
-
-    modules = {
-      "tztime local" = {
-        enable = true;
-
-        settings = {
-          format = "%H:%M";
-        };
-      };
-    };
-  };
-
-  home.packages = with pkgs; [
-    bacon
-    gcc
-    ghostty
-    google-chrome
-    rustup
-  ];
-
- programs.bash = {
-    enable = true;
-
-    shellAliases = {
-      ll = "ls -al";
-      ls = "ls --color=auto --group-directories-first -v";
-    };
-  };
-
-  programs.helix = {
-    enable = true;
-
-    defaultEditor = true;
-
-    settings = {
-      theme = "github_light";
-    };
-  };
-
-  programs.micro = {
-      enable = true;
-
-      settings = {
-        autosu = true;
-
-        colorscheme = "twilight";
-
-        colorcolumn = 72;
-
-        hlsearch = true;
-
-        helpsplit = "vsplit";
-
-        hltaberrors = true;
-
-        rmtrailingws = true;
-
-        savecursor = true;
-
-        scrollbar = true;
-
-        smartpaste = true;
-
-        tabsize = 2;
-
-        tabstospaces = true;
-      };
-  };
-
-  programs.gh = {
-    enable = true;
-
-    gitCredentialHelper.enable = true;
-  };
-
-  programs.git = {
-    enable = true;
-
-    extraConfig = {
-      advice = {
-        skippedCherryPicks = false;
-      };
-
-     fetch = {
-        prune = true;
-        pruneTags = true;
-      };
-
-      init = {
-        defaultBranch = "main";
-      };
-
-      push = {
-        autoSetupRemote = true;
-      };
-
-      user = {
-        name = "Armin Jöllenbeck";
-        email = "armin@joellenbeck.net";
-      };
-    };
-  };
 }
