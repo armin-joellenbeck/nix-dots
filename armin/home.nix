@@ -9,6 +9,7 @@
     ghostty
     google-chrome
     rustup
+    tldr
   ];
 
   imports = [
