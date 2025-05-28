@@ -4,12 +4,16 @@
   home.stateVersion = "24.11";
 
   home.packages = with pkgs; [
-    bacon
-    gcc
     ghostty
     google-chrome
-    rustup
     tldr
+
+    gcc
+
+    cargo
+    clippy
+    rustfmt
+    rust-analyzer
   ];
 
   imports = [
