@@ -43,7 +43,6 @@
 
       startup = [
         { command = "ghostty --gtk-single-instance=true"; }
-        { command = "google-chrome-stable"; }
         { command = "xsetroot -solid \"#555555\""; }
       ];
 
