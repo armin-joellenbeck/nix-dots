@@ -4,7 +4,8 @@
   system.stateVersion = "24.11";
 
   imports = [
-    /etc/nixos/hardware-configuration.nix
+    ./hardware-configuration.nix
+
     ./graphics.nix
     ./hardware.nix
     ./location.nix
