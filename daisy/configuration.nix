@@ -12,6 +12,7 @@
     ./networking.nix
     ./packages.nix
     ./sound.nix
+    ./ssh.nix
     ./users.nix
   ];
 }
