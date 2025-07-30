@@ -6,7 +6,7 @@
     description = "Armin Jöllenbeck";
     extraGroups = [ "networkmanager" "wheel" ];
     openssh.authorizedKeys.keys = [
-      "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIEl8jkdkQeJjQnHXlG+SwFLgFNdtGb81aE+BUTI7Eu+g JuiceSSH"
+      "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAINHlILC65uB97qxhZqACejWvnsEO6AlsZu89vm6VUYMH JuiceSSH"
     ];
   };
 
